@@ -2,7 +2,9 @@
   "name": "practice",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
     "create-exercise": "npx ts-node scripts/create-exercise.ts",
     "test-exercise": "npx ts-node scripts/run-tests.ts",
     "prepare": "husky"
