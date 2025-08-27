@@ -2,7 +2,6 @@ export function combinationSum(candidates: number[], target: number): number[][]
   const result: number[][] = [];
 
   function recurse(current: Array<number>, index: number, total: number) {
-    console.log({current});
     if (current.length && total === target) {
       result.push([...current]);
       return;
