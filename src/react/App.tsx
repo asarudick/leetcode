@@ -1,5 +1,8 @@
 import Counter from './counter/index';
 import Controlled from './controlled/index';
+import Uncontrolled from './uncontrolled/index';
+import SearchFilter from './search-filter';
+import Debounced from './debounced';
 import { Link, Routes, Route } from 'react-router-dom';
 import React from 'react';
 
@@ -37,28 +40,103 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/controlled" 
-                  style={{ 
-                    color: 'var(--lavender)', 
-                    textDecoration: 'none', 
-                    padding: '0.5rem 1rem', 
-                    borderRadius: '0.25rem', 
-                    transition: 'all 0.2s ease', 
-                    border: '1px solid var(--overlay0)' 
-                  }} 
-                  onMouseEnter={(e) => { 
-                    e.currentTarget.style.color = 'var(--sky)'; 
-                    e.currentTarget.style.backgroundColor = 'var(--overlay0)'; 
-                    e.currentTarget.style.textDecoration = 'underline'; 
-                  }} 
-                  onMouseLeave={(e) => { 
-                    e.currentTarget.style.color = 'var(--lavender)'; 
-                    e.currentTarget.style.backgroundColor = 'transparent'; 
-                    e.currentTarget.style.textDecoration = 'none'; 
+                <Link
+                  to="/controlled"
+                  style={{
+                    color: 'var(--lavender)',
+                    textDecoration: 'none',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid var(--overlay0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--sky)';
+                    e.currentTarget.style.backgroundColor = 'var(--overlay0)';
+                    e.currentTarget.style.textDecoration = 'underline';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--lavender)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.textDecoration = 'none';
                   }}
                 >
                   Controlled
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/uncontrolled"
+                  style={{
+                    color: 'var(--lavender)',
+                    textDecoration: 'none',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid var(--overlay0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--sky)';
+                    e.currentTarget.style.backgroundColor = 'var(--overlay0)';
+                    e.currentTarget.style.textDecoration = 'underline';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--lavender)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.textDecoration = 'none';
+                  }}
+                >
+                  Uncontrolled
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/search-filter"
+                  style={{
+                    color: 'var(--lavender)',
+                    textDecoration: 'none',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid var(--overlay0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--sky)';
+                    e.currentTarget.style.backgroundColor = 'var(--overlay0)';
+                    e.currentTarget.style.textDecoration = 'underline';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--lavender)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.textDecoration = 'none';
+                  }}
+                >
+                  Search Filter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/debounced"
+                  style={{
+                    color: 'var(--lavender)',
+                    textDecoration: 'none',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid var(--overlay0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--sky)';
+                    e.currentTarget.style.backgroundColor = 'var(--overlay0)';
+                    e.currentTarget.style.textDecoration = 'underline';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--lavender)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.textDecoration = 'none';
+                  }}
+                >
+                  Debounced
                 </Link>
               </li>
             </ul>
@@ -66,6 +144,9 @@ function App() {
         } />
         <Route path="/counter" element={<Counter />} />
         <Route path="/controlled" element={<Controlled />} />
+        <Route path="/uncontrolled" element={<Uncontrolled />} />
+        <Route path="/search-filter" element={<SearchFilter />} />
+        <Route path="/debounced" element={<Debounced />} />
       </Routes>
     </div>
   );
