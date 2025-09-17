@@ -6,6 +6,7 @@ import Debounced from './debounced';
 import { Link, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import WithLoading from './with-loading';
+import TicTacToe from './tic-tac-toe';
 
 function App() {
   return (
@@ -165,6 +166,31 @@ function App() {
                   WithLoading (HOC)
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/tic-tac-toe"
+                  style={{
+                    color: 'var(--lavender)',
+                    textDecoration: 'none',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid var(--overlay0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--sky)';
+                    e.currentTarget.style.backgroundColor = 'var(--overlay0)';
+                    e.currentTarget.style.textDecoration = 'underline';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--lavender)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.textDecoration = 'none';
+                  }}
+                >
+                  Tic-Tac-Toe
+                </Link>
+              </li>
             </ul>
           </div>
         } />
@@ -174,6 +200,7 @@ function App() {
         <Route path="/search-filter" element={<SearchFilter />} />
         <Route path="/debounced" element={<Debounced />} />
         <Route path="/with-loading" element={<WithLoading />} />
+        <Route path="/tic-tac-toe" element={<TicTacToe />} />
       </Routes>
     </div>
   );
