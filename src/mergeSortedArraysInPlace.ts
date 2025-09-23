@@ -6,7 +6,7 @@ export function mergeSortedArraysInPlace(nums1: number[], n: number, nums2: numb
   // Last element in nums1.
   let k = n + m - 1;
 
-  while (j >- 0 && i >= 0) {
+  while (j >= 0 && i >= 0) {
     if (nums1[i] < nums2[j]) {
       nums1[k] = nums2[j];
       j--;
