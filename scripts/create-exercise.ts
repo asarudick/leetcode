@@ -8,8 +8,8 @@ if (!exerciseName) {
   process.exit(1);
 }
 
-const srcDir = path.join(__dirname, '../src');
-const testsDir = path.join(__dirname, '../tests');
+const srcDir = './src';
+const testsDir = './tests';
 
 const solutionFilePath = path.join(srcDir, `${exerciseName}.ts`);
 const testFilePath = path.join(testsDir, `${exerciseName}.test.ts`);
